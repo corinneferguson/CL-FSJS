@@ -1,28 +1,171 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <title></title>
-  <link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="/styles/main.css" type="text/css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Corinne Ferguson - Full Stack JavaScript Student </title>
+
+<!-- Bootstrap -->
+<link rel="stylesheet" type="text/css"  href="/styles/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="/fonts/font-awesome/css/font-awesome.css">
+
+<!-- Google Fonts -->
+<link href='http://fonts.googleapis.com/css?family=Lato:400,700,900,300' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800,600,300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+
+
+<link rel="stylesheet" href="/styles/main.css" type="text/css">
 </head>
-<body ng-app="todoListApp">
-  
-  <h1>My TODOs!</h1>
-  
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+  <!-- Header -->
+  <header id="header">
+    <div class="intro">
+      <div class="container">
+        <div class="row">
+          <div class="intro-text">
+            <h1>Hello, I'm <span class="name">Corinne Ferguson</span></h1>
+            <p>Full Stack JavaScript Student</p>
+            <a href="#about" class="btn btn-default btn-lg page-scroll">Learn More</a> </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navigation -->
+  <div id="nav">
+    <nav class="navbar navbar-custom">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse"> <i class="fa fa-bars"></i> </button>
+          <a class="navbar-brand page-scroll" href="#page-top">Corinne Ferguson</a> </div>
+
+        <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+          <ul class="nav navbar-nav">
+            <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+            <li class="hidden"> <a href="#page-top"></a> </li>
+            <li> <a class="page-scroll" href="#about">About</a> </li>
+            <li> <a class="page-scroll" href="#skills">Skills</a> </li>
+            <li> <a class="page-scroll" href="#project">CL Project</a> </li>
+            <!-- <li> <a class="page-scroll" href="#resume">Resume</a> </li> -->
+            <li> <a class="page-scroll" href="#contact">Contact</a> </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <!-- About Section -->
+  <div id="about">
+    <div class="container">
+      <div class="section-title text-center center">
+        <h2>About Me</h2>
+        <hr>
+      </div>
+      <div class="row">
+        <div class="col-md-12 text-center"><img src="img/about.jpg" class="img-responsive"></div>
+        <div class="col-md-8 col-md-offset-2">
+          <div class="about-text">
+            <p>My name is Corinne Ferguson and I am in my first 12 week session at Code Louisville. I am currently learning Full Stack JavaScript and plan to continue my education in the winter session in January 2017. So far coding has been a very challenging, yet very rewarding experience. I hope to make a career out of my new skills in the near future!</p>
+            <p>When I am not learning to code I have many interests to fill my free time. I have a family that keeps me very busy, which is why I chose to make a to do list for my Code Louisville project. We can all use a little help being more organized. I also enjoy watching tv, movies, and going to sporting events. If you enjoyed my site and would like to contact me, my information is below.</p>
+            <p class="text-center"><a class="btn btn-primary" href="#"><i class="fa fa-download"></i> Download Resume</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Skills Section -->
+  <div id="skills" class="text-center">
+    <div class="container">
+      <div class="section-title center">
+        <h2>Skills</h2>
+        <hr>
+      </div>
+      <div class="row">
+        <div class="team-treehouse">
+          <a href="teamtreehouse.com/cjferguson79" target='_blank'>
+
+            <h1>Team Treehouse Achievements</h1>
+            <h2><strong class='total'>0</strong> points have been earned</h2>
+
+            <div class="pieChart group">
+              <div class="pie"></div>
+              <div class="legend"></div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Project Section -->
+  <div id="project">
+    <div class="container">
+      <div class="section-title text-center center">
+        <h2>Code Louisville Project</h2>
+        <hr>
+      </div>
+
+      <div class="row" ng-app="todoListApp">
+
+
+  <h1>Ferguson Family ToDo List</h1>
+
   <div class="list" ng-controller="mainCtrl">
     <div class="add">
-      <a href="#" ng-click="addTodo()">
-        + Add a New Task</a>
+      <a ng-click="addTodo()">
+        + New Task</a>
       </div>
     <todo></todo>
-   </div>
+  </div>
+</div>
+</div>
+</div>
 
-  
-  <script src="/vendor/angular.js"></script>
-  <script src="/scripts/app.js"></script>
-  <script src="/scripts/controllers/main.js"></script>
-  <script src="/scripts/controllers/todo.js"></script>
-  <script src="/scripts/services/data.js"></script>
-  <script src="/scripts/directives/todo.js"></script>
+<!-- Contact Section -->
+<div id="contact" class="text-center">
+<div class="container">
+<div class="section-title center">
+  <h2>Contact</h2>
+  <hr>
+</div>
+<div class="col-md-8 col-md-offset-2">
+  <div class="col-md-6"><i class="fa fa-envelope-o fa-2x"></i>
+    <p><a href="mailto:cjferguson79@gmail.com">cjferguson79@gmail.com</a></p>
+  </div>
+  <div class="col-md-6"> <i class="fa fa-phone fa-2x"></i>
+    <p><a href="tel:812-786-9270">812-786-9270</a></p>
+  </div>
+  <div class="clearfix"></div>
+</div>
+<div class="col-md-8 col-md-offset-2">
+  <div class="social">
+    <ul>
+      <li><a href="http://twitter.com/coco_ferguson"><i class="fa fa-twitter"></i></a></li>
+      <li><a href="https://github.com/corinneferguson"><i class="fa fa-github"></i></a></li>
+      <li><a href="https://www.linkedin.com/in/corinneferguson79"><i class="fa fa-linkedin"></i></a></li>
+    </ul>
+  </div>
+</div>
+</div>
+</div>
+<div id="footer">
+<div class="container text-center">
+<div class="fnav">
+  <p>Copyright &copy; 2016 Corinne Ferguson. Designed by <a href="http://www.templatewire.com" rel="nofollow">TemplateWire</a></p>
+</div>
+</div>
+</div>
+  <script type="text/javascript" src="/scripts/jquery.1.11.1.js"></script>
+  <script type="text/javascript" src="/scripts/bootstrap.min.js"></script>
+  <script type="text/javascript" src="/scripts/SmoothScroll.js"></script>
+  <script type="text/javascript" src="/scripts/treehouse.js"></script>
+  <script type="text/javascript" src="/scripts/waypoints.js"></script>
+  <script type="text/javascript" src="/scripts/jqBootstrapValidation.js"></script>
+  <script src="/scripts/vendor.bundle.js"></script>
+  <script src="/scripts/todo.bundle.js"></script>
+  <script type="text/javascript" src="/scripts/main.js"></script>
 </body>
 </html>
