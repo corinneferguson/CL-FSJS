@@ -4,8 +4,6 @@
 
 3) Once these are installed go to terminal and change current working directory to local project file path
 
-4) run MongoDB by typing: mongod
+4) run nodemon by typing: nodemon
 
-5) run nodemon by typing: nodemon
-
-6) Type in http://localhost:3000 in address bar
+5) Type in http://localhost:3000 in address bar
